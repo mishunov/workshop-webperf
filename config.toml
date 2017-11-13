@@ -1,0 +1,20 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Frontend Performance Workshop"
+theme = "ananke"
+
+[params]
+  favicon = ""
+  description = "Тинькофф. Moscow, Descember 09, 2017"
+  short_title = "Workshop"
+  facebook = ""
+  twitter = "https://twitter.com/mishunov"
+  instagram = ""
+  youtube = ""
+  github = "https://github.com/mishunov"
+  linkedin = "https://www.linkedin.com/in/denysmishunov/"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/moscow.jpg"
+  recent_posts_number = 2
+  email = "hello@frontend.training"
