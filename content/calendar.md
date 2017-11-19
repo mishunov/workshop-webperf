@@ -8,3 +8,9 @@ menu:
   main: {}
 ---
 
+# Future workshops
+
+# Past workshops
+
+## What others say about this workshop
+
