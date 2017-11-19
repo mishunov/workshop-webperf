@@ -1,4 +1,4 @@
-baseURL = "http://webperf.frontend.training/"
+baseURL = "https://webperf.frontend.training/"
 languageCode = "en-us"
 title = "Frontend Performance Workshop"
 theme = "ananke"
