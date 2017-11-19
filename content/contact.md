@@ -2,7 +2,6 @@
 title: "Contact"
 date: 2017-11-19T17:00:15+01:00
 description: "We would love to hear from you"
-draft: true
 content_image: '/images/contact.jpg'
 type: page
 menu:
