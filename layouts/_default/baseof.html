@@ -3,6 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script>
+      var paintObserver = new PerformanceObserver(function(list) {
+        for (const entry of list.getEntries()) {
+          // FP & FCP:
+          //-----------
+          // Here we can send information about FP and FCP to analytics
+          // for `paint` type, entry.name will be `first-paint` or `first-contentful-paint`.
+          // const metricName = entry.name;
+          // const time = Math.round(entry.startTime + entry.duration);
+    
+          // ga('send', 'event', {
+          //   eventCategory: 'Performance Metrics',
+          //   eventAction: metricName,
+          //   eventValue: time,
+          //   nonInteraction: true,
+          // });
+          console.log(entry);
+        }
+    });  
+    // register observer for long task notifications
+    // Different types of PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType
+    paintObserver.observe({entryTypes: ['paint']});
+
+    var FMPObserver = new PerformanceObserver(function(list) {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'First Meaningful Paint') {
+            // FMP:
+            const time = Math.round(entry.startTime + entry.duration);
+            console.log(time);
+          }
+        }
+    }); 
+    FMPObserver.observe({entryTypes: ['mark']});
+  </script>
+
+
+    <!-- <link rel="preconnect" href="https://s3-us-west-2.amazonaws.com" crossorigin>
+    <link rel="preconnect" href="hhttp://tachyons.io" crossorigin> -->
     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     <meta name="HandheldFriendly" content="True">
