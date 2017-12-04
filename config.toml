@@ -2,6 +2,7 @@ baseURL = "https://webperf.frontend.training/"
 languageCode = "en-us"
 title = "Frontend Performance Workshop"
 theme = "ananke"
+relativeURLs = true
 
 [params]
   favicon = ""

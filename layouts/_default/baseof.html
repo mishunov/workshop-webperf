@@ -88,6 +88,10 @@
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
+
+    <!-- Polymer bootstraping -->
+    <script src='{{ "bower_components/webcomponentsjs/webcomponents-loader.js" | absURL }}'></script>
+    <link rel="import" href='{{ "src/search-app/search-app.html" | absURL }}'>
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">

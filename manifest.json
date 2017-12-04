@@ -1,0 +1,6 @@
+{
+  "name": "search",
+  "short_name": "search",
+  "start_url": "/",
+  "display": "standalone"
+}
