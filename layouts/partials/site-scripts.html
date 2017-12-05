@@ -2,5 +2,16 @@
 <script src="{{ "js/app.bundle.js" | absURL }}"></script>
 
 <script>
+  const trigger = document.getElementById('video-overlay-trigger');
+  trigger.addEventListener('click', () => {
+    let dialogEl = document.createElement('paper-dialog');
+    dialogEl.withBackdrop = true;
+    dialogEl.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/_srJ7eHS3IM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
+    document.body.appendChild(dialogEl);
+    dialogEl.open();
+  });
+</script>
+
+<script>
   performance.mark("scripts done blocking");
 </script>
