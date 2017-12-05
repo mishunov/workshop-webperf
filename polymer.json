@@ -1,7 +1,23 @@
 {
+  "entrypoint": "index.html",
+  "shell": "static/src/search-app/search-app.html",
+  "fragments": [
+    "static/src/search-app/elements.html"
+  ],
+  "sources": [
+    "static/src/**/*"
+   ],
+  "extraDependencies": [
+    "static/bower_components/webcomponentsjs/webcomponents-lite.js"
+  ],
   "lint": {
     "rules": [
       "polymer-2"
     ]
-  }
+  },
+  "builds": [{
+    "bundle": true,
+    "css": { "minify": true },
+    "js": { "minify": true }
+  }]
 }

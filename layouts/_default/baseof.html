@@ -7,8 +7,6 @@
     <link rel="preconnect" href="//farm5.staticflickr.com">
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//tachyons.io">
-
-    <!-- <link rel="preload" href='{{ "bower_components/paper-dialog/paper-dialog.html" | absURL }}' as="fetch"> -->
   
     <script>
       var paintObserver = new PerformanceObserver(function(list) {
@@ -97,7 +95,7 @@
 
     <!-- Polymer bootstraping -->
     <script src='{{ "bower_components/webcomponentsjs/webcomponents-loader.js" | absURL }}'></script>
-    <link rel="import" href='{{ "src/search-app/search-app.html" | absURL }}'>
+    <link rel="import" href='{{ "src/search-app/elements.html" | absURL }}'>
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
