@@ -1,15 +1,6 @@
 {
   "entrypoint": "index.html",
-  "shell": "static/src/search-app/search-app.html",
-  "fragments": [
-    "static/src/search-app/elements.html"
-  ],
-  "sources": [
-    "static/src/**/*"
-   ],
-  "extraDependencies": [
-    "static/bower_components/webcomponentsjs/webcomponents-lite.js"
-  ],
+  "shell": "static/polymer-elements/video-overlay.html",
   "lint": {
     "rules": [
       "polymer-2"
