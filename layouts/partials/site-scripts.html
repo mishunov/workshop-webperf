@@ -4,22 +4,21 @@
 <script>
   const trigger = document.getElementById('video-overlay-trigger');
 
-  // 1.
-  // trigger.addEventListener('click', () => {
-  //   const popDialog = function () {
-  //     let dialogEl = document.createElement('paper-dialog');
-  //     dialogEl.withBackdrop = true;
-  //     dialogEl.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/_srJ7eHS3IM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
-  //     document.body.appendChild(dialogEl);
-  //     dialogEl.open();
-  //   };
+  trigger.addEventListener('click', () => {
+    // const popDialog = function () {
+      let dialogEl = document.createElement('paper-dialog');
+      dialogEl.withBackdrop = true;
+      dialogEl.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/_srJ7eHS3IM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
+      document.body.appendChild(dialogEl);
+      dialogEl.open();
+    // };
 
-  //   let dialogImport = document.createElement('link');
-  //   dialogImport.rel = 'import';
-  //   dialogImport.href = '{{ "bower_components/paper-dialog/paper-dialog.html" | absURL }}';
-  //   dialogImport.addEventListener('load', popDialog)
-  //   document.body.appendChild(dialogImport);  
-  // });
+    // let dialogImport = document.createElement('link');
+    // dialogImport.rel = 'import';
+    // dialogImport.href = '{{ "polymer-elements/dist/static/polymer-elements/video-overlay.html" | absURL }}';
+    // dialogImport.addEventListener('load', popDialog)
+    // document.body.appendChild(dialogImport);  
+  });
 </script>
 
 <script>
