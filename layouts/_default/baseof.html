@@ -22,6 +22,11 @@
 
     <!-- 4. -->
     <!-- <link rel="prefetch" href="//www.youtube.com/embed/_srJ7eHS3IM" as="fetch"> -->
+
+    <!-- 7. -->
+    <!-- <link rel="preload" crossorigin="crossorigin" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v12/eWRmKHdPNWGn_iFyeEYja_bbaTZmtPDRvp9xUdyvPg4.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2" as="font"> -->
   
     <script>
       var paintObserver = new PerformanceObserver(function(list) {
@@ -66,7 +71,9 @@
     FMPObserver.observe({entryTypes: ['mark']});
   </script>
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="stylesheet">
+   <!-- 7. -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="preload" as="style" onload="this.rel='stylesheet'"> -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="stylesheet">
 
     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
