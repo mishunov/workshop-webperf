@@ -20,5 +20,6 @@ relativeURLs = true
   featured_image_medium = "/images/moscow/moscow-medium.jpg"
   featured_image_large = "/images/moscow/moscow-large.jpg"
   featured_image = "/images/moscow/moscow.jpg"
+  body_classes = "bg-white"
   recent_posts_number = 2
   email = "hello@frontend.training"
