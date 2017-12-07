@@ -1,9 +1,9 @@
 .bg-top {
   background-position: 0% center;
-  position: relative;
-  overflow: hidden;
+  /* position: relative;
+  overflow: hidden; */
 }
-.bg-top > div {
+/* .bg-top > div {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -20,4 +20,4 @@
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
+} */

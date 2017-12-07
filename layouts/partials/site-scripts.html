@@ -1,6 +1,24 @@
 <!-- <script src="{{ "dist/app.bundle.js" | absURL }}" async></script> -->
 <script src="{{ "js/app.bundle.js" | absURL }}"></script>
 
+<!-- <script>
+  const domEl = document.getElementById('cathedral-container');
+  if (domEl) {
+    const img = document.createElement('img');
+    const src = 'images/cathedral-progressive.jpg';
+    const transition = 'background-image .3s linear';
+    const origTransition = domEl.style.transition;
+    img.addEventListener('load', function () {
+      window.requestAnimationFrame(function () {
+        domEl.style.transition = origTransition? `${origTransition}, ${transition}`: transition;
+        domEl.style.backgroundImage = `url("${src}")`;
+        img.remove();
+      });
+    });
+    img.src = src;
+  }
+</script> -->
+
 <script>
   performance.mark("scripts done blocking");
 </script>
