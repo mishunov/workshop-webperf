@@ -5,12 +5,17 @@
  */
 
 // Observable elements:
+// 1.
 // const images = document.querySelectorAll('img');
+// 2.
 // const images = document.querySelectorAll('[lazy-load]');
 
 // Config:
 
+// 1.
 // const config = {};
+
+// 2.
 // const config = {
 //   // If the image gets within 50px in the Y axis, start the download.
 //   rootMargin: '50px 0px',
@@ -19,16 +24,22 @@
 
 // Observer:
 // The observer for the images on the page
+
+// 1.
 // let observer = new IntersectionObserver(onIntersection, config);
 // images.forEach(image => {
 //   observer.observe(image);
 // });
 
 // Observer's handler:
+// 1.
 // function onIntersection(entries) {
 //   // entries of type IntersectionObserverEntry
 //   entries.forEach(entry => {
+
 //     // 1. console.log(entry);
+
+      // 2.
 //     // Are we in viewport?
 //     if (entry.intersectionRatio > 0) {
 //       // Stop watching and load the image
