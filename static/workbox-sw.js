@@ -53,6 +53,26 @@ workboxSW.strategies.cacheFirst({
 })
 );
 
+workboxSW.router.registerRoute('https://fonts.googleapis.com/(.*)',
+workboxSW.strategies.cacheFirst({
+  cacheName: 'googleapis',
+  cacheExpiration: {
+    maxEntries: 30
+  },
+  cacheableResponse: {statuses: [0, 200]}
+})
+);
+
+workboxSW.router.registerRoute(/.*(?:gstatic)\.com.*$/,
+workboxSW.strategies.cacheFirst({
+  cacheName: 'gstatic',
+  cacheExpiration: {
+    maxEntries: 30
+  },
+  cacheableResponse: {statuses: [0, 200]}
+})
+);
+
 workboxSW.router.registerRoute(
   new RegExp('/'),
   workboxSW.strategies.staleWhileRevalidate(),
