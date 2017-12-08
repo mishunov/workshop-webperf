@@ -40,7 +40,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="stylesheet">
 
     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
+    <title>*DEV PREVIEW* {{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -53,12 +53,12 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
 
-    <!-- <link href='{{ "dist/main.css" | absURL }}' rel='stylesheet' type="text/css" /> -->
-    <link href='{{ "css/tachyons.css" | absURL }}' rel='stylesheet' type="text/css" />
+    <link href='{{ "css/index-critical.css" | absURL }}' rel='stylesheet' type="text/css" />
+    <!-- <link href='{{ "css/tachyons.css" | absURL }}' rel='stylesheet' type="text/css" />
     <link href='{{ "css/code.css" | absURL }}' rel='stylesheet' type="text/css" />
     <link href='{{ "css/hugo-internal-templates.css" | absURL }}' rel='stylesheet' type="text/css" />
     <link href='{{ "css/social-icons.css" | absURL }}' rel='stylesheet' type="text/css" />
-    <link href='{{ "css/styles.css" | absURL }}' rel='stylesheet' type="text/css" />
+    <link href='{{ "css/styles.css" | absURL }}' rel='stylesheet' type="text/css" /> -->
     <script>
       performance.mark("stylesheets done blocking");
     </script>
