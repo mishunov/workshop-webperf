@@ -1,7 +1,14 @@
 {
+  "entrypoint": "index.html",
+  "shell": "static/polymer-elements/video-overlay.html",
   "lint": {
     "rules": [
       "polymer-2"
     ]
-  }
+  },
+  "builds": [{
+    "bundle": true,
+    "css": { "minify": true },
+    "js": { "minify": true }
+  }]
 }

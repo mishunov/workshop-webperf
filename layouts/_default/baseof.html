@@ -3,6 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- 1. -->
+    <!-- <link rel="preload" href="{{ "images/moscow.jpg" | absURL }}" as="image">
+    <link rel="preload" href="{{ "images/cathedral.jpg" | absURL }}" as="image"> -->
+
+    <!-- 2. -->
+    <!-- <link rel="preconnect" href="//farm5.staticflickr.com">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//tachyons.io"> -->
+
+    <!-- 3. -->
+    <!-- <link rel="preconnect" href="//www.youtube.com"> -->
+    <!-- <link rel="preconnect" href="//googleads.g.doubleclick.net">
+    <link rel="preconnect" href="//google.com">
+    <link rel="preconnect" href="//static.doubleclick.net">
+    <link rel="preconnect" href="//i.ytimg.com"> -->
+
+    <!-- 4. -->
+    <!-- <link rel="prefetch" href="//www.youtube.com/embed/_srJ7eHS3IM" as="fetch"> -->
+
+    <!-- 7. -->
+    <!-- <link rel="preload" crossorigin="crossorigin" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v12/eWRmKHdPNWGn_iFyeEYja_bbaTZmtPDRvp9xUdyvPg4.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2" as="font">
+    <link rel="preload" crossorigin="crossorigin" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2" as="font"> -->
   
     <script>
       var paintObserver = new PerformanceObserver(function(list) {
@@ -37,7 +61,9 @@
     FMPObserver.observe({entryTypes: ['mark']});
   </script>
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="stylesheet">
+   <!-- 7. -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="preload" as="style" onload="this.rel='stylesheet'"> -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700" rel="stylesheet">
 
     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
@@ -81,9 +107,20 @@
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
 
+    <!-- 5. -->
+    <!-- <script>if (!window.customElements) { document.write('<!--'); }</script>
+    <script type="text/javascript" src="/bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script> -->
+    <!--! do not remove -->
+
     <!-- Polymer bootstraping -->
     <script src='{{ "bower_components/webcomponentsjs/webcomponents-loader.js" | absURL }}'></script>
-    <link rel="import" href='{{ "src/search-app/search-app.html" | absURL }}'>
+    <link rel="import" href='{{ "polymer-elements/video-overlay.html" | absURL }}'>
+    
+    <!-- 5. -->
+    <!-- <link rel="import" href='{{ "polymer-elements/dist/static/polymer-elements/video-overlay.html" | absURL }}'> -->
+
+    <!-- 6. -->
+    <!-- <link rel="prefetch" href='{{ "polymer-elements/dist/static/polymer-elements/video-overlay.html" | absURL }}'> -->
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
