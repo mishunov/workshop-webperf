@@ -8,12 +8,12 @@
 // 1.
 // const images = document.querySelectorAll('img');
 // 2.
-// const images = document.querySelectorAll('[lazy-load]');
+const images = document.querySelectorAll('[data-src]');
 
 // Config:
 
 // 1.
-// const config = {};
+const config = {};
 
 // 2.
 // const config = {
@@ -26,35 +26,37 @@
 // The observer for the images on the page
 
 // 1.
-// let observer = new IntersectionObserver(onIntersection, config);
-// images.forEach(image => {
-//   observer.observe(image);
-// });
+let observer = new IntersectionObserver(onIntersection, config);
+
+images.forEach(image => {
+  observer.observe(image);
+});
 
 // Observer's handler:
 // 1.
-// function onIntersection(entries) {
-//   // entries of type IntersectionObserverEntry
-//   entries.forEach(entry => {
+function onIntersection(entries) {
+  // entries of type IntersectionObserverEntry
+  entries.forEach(entry => {
 
-//     // 1. console.log(entry);
+    // 1.
+    console.log(entry);
 
-      // 2.
-//     // Are we in viewport?
-//     if (entry.intersectionRatio > 0) {
-//       // Stop watching and load the image
-//       observer.unobserve(entry.target);
-//       // console.log(`Image ${entry.target.src} is in the viewport!`);
-//       preloadImage(entry.target);
-//     }
-//   });
-// }
+    //  2.
+    // Are we in viewport?
+    if (entry.intersectionRatio > 0) {
+      // Stop watching and load the image
+      observer.unobserve(entry.target);
+      // console.log(`Image ${entry.target.src} is in the viewport!`);
+      preloadImage(entry.target);
+    }
+  });
+}
 
 // Image preloading handler
-// function preloadImage(img) {
-//   const src = img.getAttribute('data-src');
-//   if (!src) {
-//     return;
-//   }
-//   img.src = src;
-// }
+function preloadImage(img) {
+  const src = img.getAttribute('data-src');
+  if (!src) {
+    return;
+  }
+  img.src = src;
+}
